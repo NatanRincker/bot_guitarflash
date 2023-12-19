@@ -8,8 +8,8 @@ import PySimpleGUI as sg
 watch_process_list = []
 
 def start_bot():
-    key_loc_dectionary = {'a': [541, 793], 's': [642, 792], 'j': [
-        742, 792], 'k': [843, 795], 'l': [943, 790]}
+    key_loc_dectionary = {'a': [542, 804], 's': [644, 805], 'j': [
+        741, 806], 'k': [843, 806], 'l': [945, 804]}
     print(f'watching keys...')
     for key, pixel in key_loc_dectionary.items():
         watch_process = Process(target=watch_key, args=(key, pixel))
@@ -44,7 +44,7 @@ def start_gui():
         [sg.Button('Put Game on screen', key='_PUT_GAME_'),
          sg.Button('Start BOT', key='_START_BOT_'),
          sg.Button('Stop BOT', key='_STOP_BOT_')],
-        [sg.Text('you can also press "1" on keyboard to stop the BOT')]
+        [sg.Text('you can also press "P" on keyboard to stop the BOT')]
     ]
     window = sg.Window('Guitar Flash BOT', layout)
     while True:
